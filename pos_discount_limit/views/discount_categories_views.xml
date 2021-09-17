@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <record model="ir.actions.act_window"
-            id="Discount_category_action_window">
-        <field name="name">Discount categories</field>
-        <field name="res_model">discount.categories</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-</odoo>
