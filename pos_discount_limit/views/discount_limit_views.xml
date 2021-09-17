@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="pos_config_view_form_inherit_pos_discount_limit"
+            model="ir.ui.view">
+        <field name="name">pos.config.form.inherit.pos.discount.limit</field>
+        <field name="model">pos.config</field>
+        <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='pricing']" position='inside'>
+                <div class="col-12 col-lg-6 o_setting_box"
+                     title="to set discount limit for each categories">
+                    <div class="o_setting_right_pane">
+                        <label for="available_categ_ids"
+                               string="Discount Limit (%)"/>
+                        <div class="text-muted">
+                            Set discount categories and limit
+                        </div>
+                        <field name="available_categ_ids"
+                               widget="many2many_tags"/>
+                        <button name="point_of_sale.product_pos_category_action"
+                                icon="fa-arrow-right" type="action"
+                                string="PoS Product Categories"
+                                class="btn-link"/>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 o_setting_box"
+                     title="to set discount resriction on categories">
+                    <div class="o_setting_right_pane">
+                        <label for="excluded_categ_id"
+                               string="Discount Restricted Categories"/>
+                        <div class="text-muted">
+                            Set discount restriction on categories
+                        </div>
+                        <field name="excluded_categ_id"
+                               widget="many2many_tags"/>
+                        <button name="point_of_sale.product_pos_category_action"
+                                icon="fa-arrow-right" type="action"
+                                string="PoS Product Categories"
+                                class="btn-link"/>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+
+
+
